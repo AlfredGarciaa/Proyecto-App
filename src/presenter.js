@@ -1,15 +1,13 @@
-import sumar from "./sumador";
+import balance from "./balance_general.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const balances = document.querySelector("#balance-general");
+const form = document.querySelector("#principal-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const balance_resultado = Number.parseInt(balances.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>Balance: Bs. " + balance(balance_resultado) + "</p>";
 });
