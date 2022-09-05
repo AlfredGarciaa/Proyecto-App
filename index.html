@@ -3,32 +3,24 @@
     <h1>
       <mark>Pantalla Principal</mark>
     </h1>
+    <label for="balance-general">Balance:</label>
+    <br></br>
+    <label for="gasto-general">Gastos: </label>
+    <br></br>
+    <label for="ingreso-general">Ingresos:</label>
 
-    <form id="principal-form">
-      <label for="balance-monto">Balance:</label>
+    <form id="gasto-form">
       <br></br>
-      <label for="balance-monto">Gastos: </label>
+      <b>G A S T O</b>
       <br></br>
-      <label for="balance-monto">Ingresos:</label>
-      
-      <br></br> <br></br>
-      <label>Gasto: </label>
+      <label for="gasto-monto">Monto</label>
       <input type="number" id="gasto-monto" />
+      <label for="gasto-descripcion">Descripcion</label>
       <input type="string" id="gasto-descripcion" />
       <input type="submit" value="Registrar Gasto" />
-
-      <br></br>
-      <label>Ingreso: </label>
-      <input type="number" id="ingreso-monto" />
-      <input type="string" id="ingreso-descripcion" />
-      <input type="submit" value="Registrar Ingreso" />
-
-      <br></br> 
-      <b>Historial de Transacciones</b>
-      <input type="submit" value="Actualizar" />
     </form>
+    <div id="gasto-div"></div>
 
-    <div id="resultado-div"></div>
     <script type="module" src="./src/presenter.js"></script>
     <img src="App.png">
   </body>
