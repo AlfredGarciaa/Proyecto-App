@@ -15,6 +15,8 @@ const ingreso_string = document.querySelector("#ingreso-descripcion");
 
 const form = document.querySelector("#gasto-form");
 const div = document.querySelector("#gasto-div");
+const form2 = document.querySelector("#ingreso-form");
+const div2 = document.querySelector("#ingreso-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -24,5 +26,16 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
                   "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
+                  "</p>";
+});
+
+form2.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const ingreso_monto = Number.parseInt(ingreso_number.value);
+  const ingreso_descripcion = ingreso_string.value;
+
+  div2.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
+                  "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
                   "</p>";
 });
