@@ -5,31 +5,31 @@
     </h1>
 
     <form id="principal-form">
-      <input type="number" id="balance-general" />
-      <input type="number" id="gasto-general" />
-      <input type="number" id="ingreso-general" />
-
+      <label for="balance-monto">Balance:</label>
+      <br></br>
+      <label for="balance-monto">Gastos: </label>
+      <br></br>
+      <label for="balance-monto">Ingresos:</label>
+      
+      <br></br> <br></br>
       <label>Gasto: </label>
       <input type="number" id="gasto-monto" />
       <input type="string" id="gasto-descripcion" />
       <input type="submit" value="Registrar Gasto" />
 
+      <br></br>
       <label>Ingreso: </label>
       <input type="number" id="ingreso-monto" />
       <input type="string" id="ingreso-descripcion" />
       <input type="submit" value="Registrar Ingreso" />
 
-      <label>Historial de Transacciones: </label>
+      <br></br> 
+      <b>Historial de Transacciones</b>
+      <input type="submit" value="Actualizar" />
     </form>
+
     <div id="resultado-div"></div>
-
-    <form>
-      <label>nel: </label>
-      <input type="submit" value="Ola" />
-    </form>
-
     <script type="module" src="./src/presenter.js"></script>
-
     <img src="App.png">
   </body>
 </html>

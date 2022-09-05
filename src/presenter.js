@@ -1,10 +1,10 @@
-import balance from "./balance_general.js";
+import balance from "./balance_monto.js";
 import gasto from "./gasto_general.js";
 import ingreso from "./ingreso_general.js";
 import añadir_monto from "./gasto_monto.js";
 import añadir_descripcion from "./gasto_descripcion.js";
 
-const balances = document.querySelector("#balance-general");
+const balance_number = document.querySelector("#balance-monto");
 const gastos = document.querySelector("#gasto-general");
 const ingresos = document.querySelector("#ingreso-general");
 const gastos_number = document.querySelector("#gasto-monto");
@@ -18,7 +18,7 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const balance_resultado = Number.parseInt(balances.value);
+  const balance_resultado = Number.parseInt(balance_number.value);
   const gasto_resultado = Number.parseInt(gastos.value);
   const ingreso_resultado = Number.parseInt(ingresos.value);
 
