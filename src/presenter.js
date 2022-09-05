@@ -13,29 +13,44 @@ const gasto_string = document.querySelector("#gasto-descripcion");
 const ingreso_number = document.querySelector("#ingreso-monto");
 const ingreso_string = document.querySelector("#ingreso-descripcion");
 
-const form = document.querySelector("#gasto-form");
-const div = document.querySelector("#gasto-div");
-const form2 = document.querySelector("#ingreso-form");
-const div2 = document.querySelector("#ingreso-div");
+const form = document.querySelector("#resumen-form");
+const div = document.querySelector("#resumen-div");
+const form2 = document.querySelector("#gasto-form");
+const div2 = document.querySelector("#gasto-div");
+const form3 = document.querySelector("#ingreso-form");
+const div3 = document.querySelector("#ingreso-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const gasto_monto = Number.parseInt(gasto_number.value);
-  const gasto_descripcion = gasto_string.value;
+  const balance_montos = Number.parseInt(balances.value);
+  const gastos_montos = Number.parseInt(gastos.value);
+  const ingresos_montos = Number.parseInt(ingresos.value);
 
-  div.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
-                  "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
+  div.innerHTML = "<p>Balance: Bs." + balance_mostrar(balance_montos) + "<p>" +
+                  "<p>Gastos: " + gasto_mostrar(gastos_montos) + "<p>" +
+                  "<p>Ingresos: " + ingreso_mostrar(ingresos_montos) + "<p>" +
                   "</p>";
 });
 
 form2.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const gasto_monto = Number.parseInt(gasto_number.value);
+  const gasto_descripcion = gasto_string.value;
+
+  div2.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
+                  "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
+                  "</p>";
+});
+
+form3.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   const ingreso_monto = Number.parseInt(ingreso_number.value);
   const ingreso_descripcion = ingreso_string.value;
 
-  div2.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
+  div3.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
                   "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
                   "</p>";
 });
