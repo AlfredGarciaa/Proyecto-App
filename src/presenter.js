@@ -19,6 +19,8 @@ const form2 = document.querySelector("#gasto-form");
 const div2 = document.querySelector("#gasto-div");
 const form3 = document.querySelector("#ingreso-form");
 const div3 = document.querySelector("#ingreso-div");
+const form4 = document.querySelector("#historial-form");
+const div4 = document.querySelector("#historial-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -51,6 +53,22 @@ form3.addEventListener("submit", (event) => {
   const ingreso_descripcion = ingreso_string.value;
 
   div3.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
+                  "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
+                  "</p>";
+});
+
+form4.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const gasto_monto = Number.parseInt(gasto_number.value);
+  const gasto_descripcion = gasto_string.value;
+  const ingreso_monto = Number.parseInt(ingreso_number.value);
+  const ingreso_descripcion = ingreso_string.value;
+
+  div4.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
+                  "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
+                  
+                  "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
                   "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
                   "</p>";
 });
