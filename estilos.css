@@ -1,0 +1,13 @@
+.caja-negra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 220;
+    height: 220;
+}
+
+.caja-negra img{
+    width: 200;
+    height: 200;
+}

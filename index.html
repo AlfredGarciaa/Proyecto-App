@@ -1,11 +1,16 @@
 <html>
-  <body>
-    <h1>
-      <mark>Pantalla Principal</mark>
-    </h1>
+  <link rel="stylesheet" href="estilos.css">
+  <h1>
+    <mark>Pantalla Principal</mark>
+  </h1>
+  <body style="background-color:navajowhite">
+    <div class="caja-negra">
+      <img src="App.png">
+    </div>
+
     <form id="reiniciar-form">
       <input type="submit" value="Limpiar"/>
-  </form>
+    </form>
 
     <form id="resumen-form">
       <input type="submit" value="Mostrar" />
@@ -45,6 +50,5 @@
     <div id="historial-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
-    <img src="App.png">
   </body>
 </html>
