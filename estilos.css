@@ -3,11 +3,11 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    width: 220;
-    height: 220;
+    width: 200;
+    height: 200;
 }
 
 .caja-negra img{
-    width: 200;
-    height: 200;
+    width: 180;
+    height: 180;
 }
