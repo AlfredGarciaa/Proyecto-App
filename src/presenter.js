@@ -40,8 +40,8 @@ form2.addEventListener("submit", (event) => {
   const gasto_descripcion = gasto_string.value;
 
   div2.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
-                  "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
-                  "</p>";
+                   "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
+                   "</p>";
 });
 
 form3.addEventListener("submit", (event) => {
@@ -51,8 +51,8 @@ form3.addEventListener("submit", (event) => {
   const ingreso_descripcion = ingreso_string.value;
 
   div3.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
-                  "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
-                  "</p>";
+                   "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
+                   "</p>";
 });
 
 form4.addEventListener("submit", (event) => {
