@@ -19,6 +19,7 @@ const form3 = document.querySelector("#ingreso-form");
 const div3 = document.querySelector("#ingreso-div");
 const form4 = document.querySelector("#historial-form");
 const div4 = document.querySelector("#historial-div");
+const formReiniciar = document.querySelector("#reiniciar-form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -42,6 +43,7 @@ form2.addEventListener("submit", (event) => {
   div2.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
                    "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
                    "</p>";
+  alert("Registro de Gasto Completo ???");
 });
 
 form3.addEventListener("submit", (event) => {
@@ -53,6 +55,7 @@ form3.addEventListener("submit", (event) => {
   div3.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
                    "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
                    "</p>";
+  alert("Registro de Ingreso Completo ???");
 });
 
 form4.addEventListener("submit", (event) => {
@@ -71,4 +74,11 @@ form4.addEventListener("submit", (event) => {
                    "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
                    "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
                    "</p>";
+});
+
+formReiniciar.addEventListener("submit", (event) => 
+{
+  event.preventDefault();
+  location.reload();
+  alert("Pantalla Nueva ???");
 });
