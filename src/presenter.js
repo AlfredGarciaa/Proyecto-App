@@ -4,8 +4,6 @@ import ingreso_mostrar from "./ingresos.js";
 import monto_añadir from "./montos.js";
 import descricpcion_añadir from "./descripciones.js";
 
-const balances = document.querySelector("#balance-general");
-
 const gasto_number = document.querySelector("#gasto-monto");
 const gasto_string = document.querySelector("#gasto-descripcion");
 const ingreso_number = document.querySelector("#ingreso-monto");
@@ -24,14 +22,14 @@ const formReiniciar = document.querySelector("#reiniciar-form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const balance_montos = Number.parseInt(balances.value);
   const gastos_montos = Number.parseInt(gasto_number.value);
   const ingresos_montos = Number.parseInt(ingreso_number.value);
 
-  div.innerHTML = "<p>Balance: Bs." + balance_mostrar(balance_montos) + "<p>" +
+  div.innerHTML = "<p>Balance: Bs." + balance_mostrar(gastos_montos, ingresos_montos) + " (Base=$us 1000)<p>" +
                   "<p>Gastos: Bs." + gasto_mostrar(gastos_montos) + "<p>" +
                   "<p>Ingresos: Bs." + ingreso_mostrar(ingresos_montos) + "<p>" +
                   "</p>";
+  alert("(Planilla Cargada).");
 });
 
 form2.addEventListener("submit", (event) => {
@@ -43,7 +41,7 @@ form2.addEventListener("submit", (event) => {
   div2.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
                    "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
                    "</p>";
-  alert("Registro de Gasto Completo ???");
+  alert("(Registro de Gasto Completo).");
 });
 
 form3.addEventListener("submit", (event) => {
@@ -55,7 +53,7 @@ form3.addEventListener("submit", (event) => {
   div3.innerHTML = "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
                    "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
                    "</p>";
-  alert("Registro de Ingreso Completo ???");
+  alert("(Registro de Ingreso Completo).");
 });
 
 form4.addEventListener("submit", (event) => {
@@ -80,5 +78,5 @@ formReiniciar.addEventListener("submit", (event) =>
 {
   event.preventDefault();
   location.reload();
-  alert("Pantalla Nueva ???");
+  alert("(Pantalla Nueva).");
 });

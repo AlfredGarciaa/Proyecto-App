@@ -1,7 +1,14 @@
-function balance_mostrar(saldo) {
-  saldo = 1000;
+function balance_mostrar(gastos, ingresos) {
+  let saldo=1000, calculador;
 
-  return saldo;
+  if((gastos > 0) && (ingresos > 0)){
+    calculador = (saldo + ingresos) - gastos;
+  }
+  else{
+    calculador = 1000;
+  }
+
+  return calculador;
 }
 
 export default balance_mostrar;
