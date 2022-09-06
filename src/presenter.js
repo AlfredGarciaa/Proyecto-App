@@ -5,8 +5,6 @@ import monto_añadir from "./montos.js";
 import descricpcion_añadir from "./descripciones.js";
 
 const balances = document.querySelector("#balance-general");
-const gastos = document.querySelector("#gasto-general");
-const ingresos = document.querySelector("#ingreso-general");
 
 const gasto_number = document.querySelector("#gasto-monto");
 const gasto_string = document.querySelector("#gasto-descripcion");
@@ -26,12 +24,12 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const balance_montos = Number.parseInt(balances.value);
-  const gastos_montos = Number.parseInt(gastos.value);
-  const ingresos_montos = Number.parseInt(ingresos.value);
+  const gastos_montos = Number.parseInt(gasto_number.value);
+  const ingresos_montos = Number.parseInt(ingreso_number.value);
 
   div.innerHTML = "<p>Balance: Bs." + balance_mostrar(balance_montos) + "<p>" +
-                  "<p>Gastos: " + gasto_mostrar(gastos_montos) + "<p>" +
-                  "<p>Ingresos: " + ingreso_mostrar(ingresos_montos) + "<p>" +
+                  "<p>Gastos: Bs." + gasto_mostrar(gastos_montos) + "<p>" +
+                  "<p>Ingresos: Bs." + ingreso_mostrar(ingresos_montos) + "<p>" +
                   "</p>";
 });
 
@@ -65,10 +63,12 @@ form4.addEventListener("submit", (event) => {
   const ingreso_monto = Number.parseInt(ingreso_number.value);
   const ingreso_descripcion = ingreso_string.value;
 
-  div4.innerHTML = "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
-                  "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
+  div4.innerHTML = "<p>Tipo: Gasto."  +
+                   "<p>Monto: Bs." + monto_añadir(gasto_monto) + "<p>" +
+                   "<p>Descripcion: " + descricpcion_añadir(gasto_descripcion) + "<p>" +
                   
-                  "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
-                  "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
-                  "</p>";
+                   "<p>Tipo: Ingreso." +
+                   "<p>Monto: Bs." + monto_añadir(ingreso_monto) + "<p>" +
+                   "<p>Descripcion: " + descricpcion_añadir(ingreso_descripcion) + "<p>" +
+                   "</p>";
 });

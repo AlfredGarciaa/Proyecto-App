@@ -1,7 +1,8 @@
 function gasto_mostrar(total) {
-    total = 0;
+    let acumulador=0;
+    acumulador = acumulador + total;
   
-    return total;
+    return acumulador;
   }
   
   export default gasto_mostrar;

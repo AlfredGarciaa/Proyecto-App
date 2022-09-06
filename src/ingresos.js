@@ -1,7 +1,8 @@
 function ingreso_mostrar(total) {
-    total = 0;
-  
-    return total;
+    let acumulador=0;
+    acumulador = acumulador + total;
+
+    return acumulador;
   }
   
   export default ingreso_mostrar;
