@@ -80,3 +80,7 @@ formReiniciar.addEventListener("submit", (event) =>
   location.reload();
   alert("(Pantalla Nueva).");
 });
+
+
+
+// PRUEBAS DE BOT :)
